@@ -242,7 +242,8 @@ a { color: inherit; }
 .step-num .phoen { font-size: 2.4rem; color: var(--purple); line-height: 1; }
 
 /* Phoenician script */
-.phoen { font-family: "Noto Sans Phoenician", serif; }
+/* unicode-bidi: Phoenician is right-to-left; isolate it so it does not reorder the text around it */
+.phoen { font-family: "Noto Sans Phoenician", serif; unicode-bidi: isolate; }
 
 /* Why us */
 .split {
