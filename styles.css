@@ -3,8 +3,10 @@
   --ink-soft: #2b3d57;
   --sand: #f6f1e8;
   --sand-deep: #ece3d3;
-  --terracotta: #c0582f;
-  --terracotta-dark: #9e4523;
+  --purple: #6b1f4f;
+  --purple-dark: #4f1339;
+  --gold: #b8893b;
+  --gold-light: #d9b36a;
   --text: #1c2533;
   --muted: #5b6474;
   --white: #ffffff;
@@ -54,7 +56,7 @@ a { color: inherit; }
   letter-spacing: 0.12em;
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--terracotta);
+  color: var(--purple);
   margin-bottom: 0.8em;
 }
 
@@ -64,21 +66,21 @@ a { color: inherit; }
   max-width: 60ch;
 }
 
-.accent { color: var(--terracotta); }
+.accent { color: var(--purple); }
 
 /* Buttons */
 .btn {
   display: inline-block;
-  background: var(--terracotta);
+  background: var(--purple);
   color: var(--white);
   text-decoration: none;
   font-weight: 600;
   padding: 0.85em 1.5em;
   border-radius: 999px;
-  border: 2px solid var(--terracotta);
+  border: 2px solid var(--purple);
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
-.btn:hover { background: var(--terracotta-dark); border-color: var(--terracotta-dark); }
+.btn:hover { background: var(--purple-dark); border-color: var(--purple-dark); }
 .btn-small { padding: 0.5em 1.1em; font-size: 0.9rem; }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn-ghost:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
@@ -110,19 +112,19 @@ a { color: inherit; }
   font-size: 1.25rem;
   color: var(--ink);
 }
-.logo em { font-style: normal; color: var(--terracotta); }
+.logo em { font-style: normal; color: var(--purple); }
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a:not(.btn) {
   text-decoration: none;
   font-weight: 500;
   color: var(--ink-soft);
 }
-.nav a:not(.btn):hover { color: var(--terracotta); }
+.nav a:not(.btn):hover { color: var(--purple); }
 
 /* Hero */
 .hero {
   background:
-    radial-gradient(circle at 85% 20%, rgba(192, 88, 47, 0.12), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(107, 31, 79, 0.10), transparent 45%),
     var(--sand);
   padding: 110px 0 120px;
   position: relative;
@@ -136,7 +138,30 @@ a { color: inherit; }
   height: 60px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20'%3E%3Cpath d='M0 10 Q15 0 30 10 T60 10 T90 10 T120 10' fill='none' stroke='%2314233a' stroke-opacity='.12' stroke-width='2'/%3E%3C/svg%3E") repeat-x bottom / 120px 20px;
 }
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
 .hero-inner h1 { max-width: 20ch; }
+
+/* Phoenician merchant ship */
+.hero-ship { width: 100%; height: auto; max-width: 440px; justify-self: end; }
+.ship-sun { fill: var(--gold); opacity: 0.14; }
+.ship-line, .ship-rope, .ship-wave {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.ship-rope { stroke-width: 1.5; opacity: 0.5; }
+.ship-wave { stroke-width: 3; opacity: 0.25; }
+.ship-sail { fill: var(--purple); }
+.ship-stripes { stroke: var(--gold-light); stroke-width: 5; opacity: 0.85; }
+.ship-hull { fill: var(--ink); }
+.ship-shields circle { fill: var(--gold); stroke: var(--ink); stroke-width: 2; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 2em; }
 
 /* Sections */
@@ -145,7 +170,7 @@ a { color: inherit; }
 .section-dark { background: var(--ink); color: var(--sand); }
 .section-dark h2 { color: var(--white); }
 .section-dark .lead { color: #c5cedb; }
-.section-dark .eyebrow { color: #e8906b; }
+.section-dark .eyebrow { color: var(--gold-light); }
 
 .grid { display: grid; gap: 22px; margin-top: 44px; }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
@@ -169,7 +194,7 @@ a { color: inherit; }
 .card-icon svg {
   width: 24px; height: 24px;
   fill: none;
-  stroke: var(--terracotta);
+  stroke: var(--purple);
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -191,12 +216,18 @@ a { color: inherit; }
 }
 .steps p { color: var(--muted); margin: 0; }
 .step-num {
-  display: block;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
   font-family: "Fraunces", Georgia, serif;
-  font-size: 2rem;
-  color: var(--terracotta);
-  margin-bottom: 8px;
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 10px;
 }
+.step-num .phoen { font-size: 2.4rem; color: var(--purple); line-height: 1; }
+
+/* Phoenician script */
+.phoen { font-family: "Noto Sans Phoenician", serif; }
 
 /* Why us */
 .split {
@@ -219,9 +250,80 @@ a { color: inherit; }
   left: 0; top: 20px;
   width: 22px; height: 22px;
   border-radius: 50%;
-  background: var(--terracotta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
+  background: var(--purple) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
 }
 .checklist strong { color: var(--ink); }
+
+/* Heritage: Gubla + Phoenician trade route */
+.heritage {
+  margin-top: 80px;
+  padding-top: 56px;
+  border-top: 1px solid var(--sand-deep);
+}
+.heritage-name {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.heritage-name .phoen {
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1;
+  color: var(--purple);
+}
+.heritage-name p { margin: 0; color: var(--muted); max-width: 38ch; }
+.heritage-name strong { color: var(--ink); }
+
+.route {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+.route::before {
+  /* dashed sea route linking the trading posts */
+  content: "";
+  position: absolute;
+  left: 12.5%; right: 12.5%;
+  top: 9px;
+  border-top: 2px dashed var(--gold);
+}
+.route li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 32px;
+}
+.route li::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--gold);
+}
+.route .route-home::before {
+  top: -2px;
+  width: 24px; height: 24px;
+  background: var(--purple);
+  border-color: var(--purple);
+  box-shadow: 0 0 0 6px rgba(107, 31, 79, 0.15);
+}
+.route-city { font-family: "Fraunces", Georgia, serif; font-weight: 600; color: var(--ink); font-size: 1.1rem; }
+.route-home .route-city { color: var(--purple); }
+.route-country { font-size: 0.85rem; color: var(--muted); }
+.route-caption {
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+  max-width: 56ch;
+  margin: 40px auto 0;
+}
 
 /* Contact */
 .contact {
@@ -248,7 +350,7 @@ a { color: inherit; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   overflow-wrap: anywhere;
 }
-.contact-line:hover span:last-child { color: #e8906b; }
+.contact-line:hover span:last-child { color: var(--gold-light); }
 .contact-line .label {
   font-size: 0.78rem;
   text-transform: uppercase;
@@ -264,7 +366,8 @@ a { color: inherit; }
   padding: 26px 0;
 }
 .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.footer-inner p { margin: 0; }
+.footer-inner p { margin: 0; display: flex; align-items: center; gap: 12px; }
+.footer-mark { color: var(--gold-light); font-size: 1.3rem; }
 .site-footer a { color: #c5cedb; }
 
 /* Legal page */
@@ -276,7 +379,8 @@ a { color: inherit; }
 /* Responsive */
 @media (max-width: 960px) {
   .grid-4, .steps { grid-template-columns: repeat(2, 1fr); }
-  .split, .contact { grid-template-columns: 1fr; gap: 36px; }
+  .split, .contact, .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero-ship { justify-self: center; max-width: 340px; }
 }
 @media (max-width: 720px) {
   .nav a:not(.btn) { display: none; }
@@ -284,6 +388,9 @@ a { color: inherit; }
   .section { padding: 70px 0; }
 }
 @media (max-width: 520px) {
+  .heritage-name { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .route-city { font-size: 0.95rem; }
+  .route-country { font-size: 0.75rem; }
   .grid-4, .steps { grid-template-columns: 1fr; }
   .logo span { font-size: 1.05rem; }
   .btn-small { padding: 0.45em 0.9em; font-size: 0.82rem; }

@@ -8,7 +8,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Noto+Sans+Phoenician&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,6 +32,7 @@
 
     <section class="hero">
       <div class="container hero-inner">
+        <div class="hero-text">
         <p class="eyebrow">Distributeur e-commerce · Amazon</p>
         <h1>Vos produits, <span class="accent">vendus sur Amazon</span>, sans que vous ayez à vous en occuper.</h1>
         <p class="lead">
@@ -42,6 +43,28 @@
           <a href="#contact" class="btn">Proposer vos produits</a>
           <a href="#processus" class="btn btn-ghost">Comment ça marche</a>
         </div>
+        </div>
+
+        <!-- Phoenician merchant ship: curled stern, horse-head prow, striped square sail -->
+        <svg class="hero-ship" viewBox="0 0 400 320" role="img" aria-label="Navire marchand phénicien">
+          <circle cx="215" cy="130" r="105" class="ship-sun"/>
+          <line x1="200" y1="212" x2="200" y2="58" class="ship-line"/>
+          <path d="M112 66 Q200 56 288 66" class="ship-line"/>
+          <path d="M120 70 L280 70 L270 176 L130 176 Z" class="ship-sail"/>
+          <path d="M152 70 L150 176 M184 70 L184 176 M216 70 L216 176 M248 70 L250 176" class="ship-stripes"/>
+          <path d="M120 70 L130 176 M280 70 L270 176" class="ship-rope"/>
+          <path d="M62 212 Q56 180 72 160 Q86 146 94 162 Q98 174 86 176" class="ship-line"/>
+          <path d="M62 212 Q90 250 200 250 Q310 250 338 212 Z" class="ship-hull"/>
+          <path d="M338 212 Q352 190 348 168 Q346 156 356 152 L368 150 Q374 156 366 162 L358 164 Q360 188 350 212" class="ship-hull"/>
+          <g class="ship-shields">
+            <circle cx="110" cy="214" r="7"/><circle cx="140" cy="214" r="7"/><circle cx="170" cy="214" r="7"/>
+            <circle cx="200" cy="214" r="7"/><circle cx="230" cy="214" r="7"/><circle cx="260" cy="214" r="7"/>
+            <circle cx="290" cy="214" r="7"/>
+          </g>
+          <path d="M120 238 L100 280 M160 244 L144 286 M200 246 L188 288 M240 244 L230 286 M280 238 L272 280" class="ship-line"/>
+          <path d="M20 280 Q45 268 70 280 T120 280 T170 280 T220 280 T270 280 T320 280 T370 280 T420 280" class="ship-wave"/>
+          <path d="M0 300 Q25 288 50 300 T100 300 T150 300 T200 300 T250 300 T300 300 T350 300 T400 300" class="ship-wave"/>
+        </svg>
       </div>
     </section>
 
@@ -87,23 +110,24 @@
         <p class="eyebrow">Processus</p>
         <h2>Travailler avec nous, en quatre étapes</h2>
         <ol class="steps">
+          <!-- Steps are numbered with the first four letters of the Phoenician alphabet -->
           <li>
-            <span class="step-num">01</span>
+            <span class="step-num"><span class="phoen" aria-hidden="true">𐤀</span>01</span>
             <h3>Premier échange</h3>
             <p>Vous nous présentez votre catalogue, vos tarifs professionnels et vos conditions.</p>
           </li>
           <li>
-            <span class="step-num">02</span>
+            <span class="step-num"><span class="phoen" aria-hidden="true">𐤁</span>02</span>
             <h3>Étude du potentiel</h3>
             <p>Nous analysons la demande et la concurrence sur Amazon pour chaque référence.</p>
           </li>
           <li>
-            <span class="step-num">03</span>
+            <span class="step-num"><span class="phoen" aria-hidden="true">𐤂</span>03</span>
             <h3>Première commande</h3>
             <p>Nous passons une commande test, puis ajustons les volumes selon les ventes.</p>
           </li>
           <li>
-            <span class="step-num">04</span>
+            <span class="step-num"><span class="phoen" aria-hidden="true">𐤃</span>04</span>
             <h3>Réassort régulier</h3>
             <p>Une fois les produits lancés, nous commandons régulièrement et partageons les retours clients.</p>
           </li>
@@ -127,6 +151,23 @@
           <li><strong>Transparence</strong> sur les ventes et les retours clients.</li>
           <li><strong>Relation durable</strong> : nous cherchons des partenaires sur le long terme.</li>
         </ul>
+      </div>
+
+      <div class="container heritage">
+        <div class="heritage-name">
+          <span class="phoen" aria-hidden="true">𐤂𐤁𐤋</span>
+          <p><strong>Gubla</strong>, le nom phénicien de Byblos, dans l'alphabet né sur ces côtes.</p>
+        </div>
+        <ol class="route" aria-label="Comptoirs phéniciens, d'ouest en est">
+          <li><span class="route-city">Gadès</span><span class="route-country">Espagne</span></li>
+          <li><span class="route-city">Carthage</span><span class="route-country">Tunisie</span></li>
+          <li><span class="route-city">Kition</span><span class="route-country">Chypre</span></li>
+          <li class="route-home"><span class="route-city">Byblos</span><span class="route-country">Liban</span></li>
+        </ol>
+        <p class="route-caption">
+          Il y a trois mille ans, les marchands de Byblos reliaient les rives de la Méditerranée.
+          Aujourd'hui, nous relions les marques aux clients d'Amazon.
+        </p>
       </div>
     </section>
 
@@ -161,7 +202,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year">2026</span> Byblos Distribution. Tous droits réservés.</p>
+      <p><span class="phoen footer-mark" aria-hidden="true">𐤂𐤁𐤋</span>© <span id="year">2026</span> Byblos Distribution. Tous droits réservés.</p>
       <a href="mentions-legales.html">Mentions légales</a>
     </div>
   </footer>
