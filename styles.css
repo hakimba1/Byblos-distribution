@@ -113,6 +113,7 @@ a { color: inherit; }
   color: var(--ink);
 }
 .logo em { font-style: normal; color: var(--purple); }
+.logo span { white-space: nowrap; }
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a:not(.btn) {
   text-decoration: none;
@@ -120,6 +121,20 @@ a { color: inherit; }
   color: var(--ink-soft);
 }
 .nav a:not(.btn):hover { color: var(--purple); }
+
+/* Language switcher (FR | EN) */
+.lang-switch {
+  display: flex;
+  border: 1px solid var(--sand-deep);
+  border-radius: 999px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.lang-switch > * { padding: 0.35em 0.7em; }
+.lang-switch [aria-current] { background: var(--ink); color: var(--white); }
+.nav .lang-switch a { color: var(--muted); text-decoration: none; }
+.nav .lang-switch a:hover { color: var(--purple); background: var(--sand); }
 
 /* Hero */
 .hero {
@@ -383,7 +398,8 @@ a { color: inherit; }
   .hero-ship { justify-self: center; max-width: 340px; }
 }
 @media (max-width: 720px) {
-  .nav a:not(.btn) { display: none; }
+  .nav > a:not(.btn) { display: none; }
+  .nav { gap: 12px; }
   .hero { padding: 70px 0 90px; }
   .section { padding: 70px 0; }
 }
@@ -393,5 +409,5 @@ a { color: inherit; }
   .route-country { font-size: 0.75rem; }
   .grid-4, .steps { grid-template-columns: 1fr; }
   .logo span { font-size: 1.05rem; }
-  .btn-small { padding: 0.45em 0.9em; font-size: 0.82rem; }
+  .nav .btn-small { display: none; }
 }
