@@ -401,8 +401,15 @@ a { color: inherit; }
 @media (max-width: 720px) {
   .nav > a:not(.btn) { display: none; }
   .nav { gap: 12px; }
-  .hero { padding: 70px 0 90px; }
   .section { padding: 70px 0; }
+
+  /* Phones: ship on top, compact hero, so ship + text + CTA fit the first screen */
+  .hero { padding: 20px 0 64px; }
+  .hero-inner { gap: 8px; }
+  .hero-ship { order: -1; max-width: 220px; }
+  .hero h1 { font-size: 2rem; }
+  .hero .lead { font-size: 1rem; }
+  .hero-actions { margin-top: 1.4em; }
 }
 @media (max-width: 520px) {
   .heritage-name { flex-direction: column; align-items: flex-start; gap: 12px; }
@@ -411,4 +418,6 @@ a { color: inherit; }
   .grid-4, .steps { grid-template-columns: 1fr; }
   .logo span { font-size: 1.05rem; }
   .nav .btn-small { display: none; }
+  /* "How it works" is one scroll away; keep the first screen to one clear CTA */
+  .hero-actions .btn-ghost { display: none; }
 }
