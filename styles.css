@@ -404,12 +404,12 @@ a { color: inherit; }
   .section { padding: 70px 0; }
 
   /* Phones: ship on top, compact hero, so ship + text + CTA fit the first screen */
-  .hero { padding: 20px 0 64px; }
+  .hero { padding: 12px 0 64px; }
   .hero-inner { gap: 8px; }
-  .hero-ship { order: -1; max-width: 220px; }
+  .hero-ship { order: -1; max-width: 170px; }
   .hero h1 { font-size: 2rem; }
   .hero .lead { font-size: 1rem; }
-  .hero-actions { margin-top: 1.4em; }
+  .hero-actions { margin-top: 1.1em; }
 }
 @media (max-width: 520px) {
   .heritage-name { flex-direction: column; align-items: flex-start; gap: 12px; }
