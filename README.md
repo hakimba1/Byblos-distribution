@@ -12,7 +12,3 @@ HTML/CSS statique, sans build ni dépendance.
 python3 -m http.server 8080
 ```
 Puis ouvrir http://localhost:8080
-
-## Informations à compléter
-
-Chercher `TODO` dans `index.html` et `[` dans `mentions-legales.html` : e-mail, téléphone, SIRET, adresse, etc.
